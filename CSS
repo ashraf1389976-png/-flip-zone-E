@@ -12,8 +12,10 @@ body {
 
 .hero {
   height: 100vh;
-  background:
-    linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
     url("../assets/images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -22,6 +24,7 @@ body {
   align-items: center;
   text-align: center;
 }
+
 
 .hero span {
   color: #ff4ecd;
