@@ -63,3 +63,17 @@ body {
   border-radius: 16px;
   text-align: center;
 }
+.lang-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #ff4ecd, #6c2fff);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 999;
+}
+
