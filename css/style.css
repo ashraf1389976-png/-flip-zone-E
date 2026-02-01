@@ -154,5 +154,8 @@ body {
   margin-top: 20px;
 }
 .hero-content p {
-  margin-bottom: 45px;
+  margin-bottom: 55px;
+}
+.hero * {
+  display: none;
 }
