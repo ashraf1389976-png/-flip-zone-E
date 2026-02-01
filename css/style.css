@@ -39,7 +39,8 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  min-height: 70vh;
+}
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url("../bg.jpg");
@@ -155,7 +156,4 @@ body {
 }
 .hero-content p {
   margin-bottom: 45px;
-}
-.hero * {
-  display: none;
 }
