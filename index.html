@@ -27,5 +27,39 @@
 </section>
 
 <script src="js/main.js"></script>
+  <script>
+let isArabic = false;
+
+const translations = {
+  en: {
+    title: "Welcome to FlipZone",
+    desc: "Experience the impossible. Walk on ceilings, defy gravity."
+  },
+  ar: {
+    title: "مرحبًا بكم في فليب زون",
+    desc: "عِش التجربة المستحيلة، امشِ على السقف وتحدّى الجاذبية"
+  }
+};
+
+const titleEl = document.querySelector("h1");
+const descEl = document.querySelector("p");
+const btn = document.getElementById("langBtn");
+
+btn.onclick = () => {
+  isArabic = !isArabic;
+
+  if (isArabic) {
+    titleEl.innerText = translations.ar.title;
+    descEl.innerText = translations.ar.desc;
+    document.body.dir = "rtl";
+    btn.innerText = "EN";
+  } else {
+    titleEl.innerText = translations.en.title;
+    descEl.innerText = translations.en.desc;
+    document.body.dir = "ltr";
+    btn.innerText = "AR";
+  }
+};
+</script>
 </body>
 </html>
