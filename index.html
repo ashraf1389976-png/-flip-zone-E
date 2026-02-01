@@ -11,20 +11,30 @@
 
 <header class="hero">
   <div class="content">
-    <span class="tag">Where Gravity Disappears</span>
-    <h1>Welcome to <span>FlipZone</span></h1>
-    <p>Experience the impossible. Walk on ceilings, defy gravity.</p>
-    <a href="#" class="btn">Book Your Experience</a>
-  </div>
-</header>
+   <span id="tagline">Where Gravity Disappears</span>
 
-<section class="dashboard">
-  <h2>Dashboard Overview</h2>
-  <div class="cards">
-    <div class="card">Visitors</div>
-    <div class="card">Bookings</div>
-    <div class="card">Revenue</div>
-  </div>
+<h1 id="title">
+  Welcome to <span>FlipZone</span>
+</h1>
+
+<p id="description">
+  Experience the impossible. Walk on ceilings, defy gravity.
+</p>
+
+<a href="#" class="btn" id="bookBtn">Book Your Experience</a>
+
+<h2 id="dashboardTitle">Dashboard Overview</h2>
+
+<div class="card">
+  <h3 id="visitors">Visitors</h3>
+</div>
+<div class="card">
+  <h3 id="bookings">Bookings</h3>
+</div>
+<div class="card">
+  <h3 id="revenue">Revenue</h3>
+</div>
+    
 </section>
 
 <script src="js/main.js"></script>
@@ -63,4 +73,48 @@ btn.onclick = () => {
 };
 </script>
 </body>
+    <script>
+let isArabic = false;
+
+const content = {
+  en: {
+    tagline: "Where Gravity Disappears",
+    title: "Welcome to <span>FlipZone</span>",
+    description: "Experience the impossible. Walk on ceilings, defy gravity.",
+    book: "Book Your Experience",
+    dashboard: "Dashboard Overview",
+    visitors: "Visitors",
+    bookings: "Bookings",
+    revenue: "Revenue"
+  },
+  ar: {
+    tagline: "حيث تختفي الجاذبية",
+    title: "مرحبًا بك في <span>FlipZone</span>",
+    description: "عِش المستحيل. امشِ على الأسقف وتحدَّ الجاذبية.",
+    book: "احجز تجربتك",
+    dashboard: "نظرة عامة على اللوحة",
+    visitors: "الزوار",
+    bookings: "الحجوزات",
+    revenue: "الإيرادات"
+  }
+};
+
+document.getElementById("langToggle").onclick = () => {
+  isArabic = !isArabic;
+  const lang = isArabic ? "ar" : "en";
+
+  document.getElementById("tagline").innerHTML = content[lang].tagline;
+  document.getElementById("title").innerHTML = content[lang].title;
+  document.getElementById("description").innerHTML = content[lang].description;
+  document.getElementById("bookBtn").innerHTML = content[lang].book;
+  document.getElementById("dashboardTitle").innerHTML = content[lang].dashboard;
+  document.getElementById("visitors").innerHTML = content[lang].visitors;
+  document.getElementById("bookings").innerHTML = content[lang].bookings;
+  document.getElementById("revenue").innerHTML = content[lang].revenue;
+
+  document.body.dir = isArabic ? "rtl" : "ltr";
+  document.getElementById("langToggle").innerHTML = isArabic ? "EN" : "AR";
+};
+</script>
+
 </html>
