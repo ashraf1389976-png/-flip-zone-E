@@ -82,3 +82,37 @@ body {
 .hero .tag { margin-bottom: 12px; }
 .hero h1 { margin-bottom: 18px; }
 .hero p  { margin-bottom: 28px; line-height: 1.7; }
+/* DASHBOARD SECTION */
+.dashboard {
+  min-height: 100vh;
+  padding: 80px 10%;
+  background: #0b0b14;
+  text-align: center;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #151525;
+  padding: 40px;
+  border-radius: 20px;
+  font-size: 22px;
+}
+
+/* ANIMATION */
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
